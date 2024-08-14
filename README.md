@@ -1,4 +1,5 @@
 # diamonds
+Video : https://www.youtube.com/watch?v=iFiabPUOQtw
 JavaScript Diamonds Betting Simulator
 Download and install NodeJS
 https://github.com/mrbtcgambler/baccarat.git
