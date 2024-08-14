@@ -1,3 +1,5 @@
+//https://www.youtube.com/watch?v=iFiabPUOQtw
+
 import crypto from 'crypto';
 const debugMode = false; // Set to true for detailed logging, false for simpler logs
 
@@ -16,9 +18,6 @@ let noBets = 7200000, //240000 = 1 day, 1680000 = 1 week, 7200000 = 1 Month 8640
     totalBet = (nextBet),
     currentStreak = 0,
     highestLosingStreak = 0,
-    dealerWinCount = 0,
-    playerWinCount = 0,
-    tieWinCount = 0,
     winCount = 0,
     loseCount = 0,
     zeroMatch = 0,
@@ -28,9 +27,6 @@ let noBets = 7200000, //240000 = 1 day, 1680000 = 1 week, 7200000 = 1 Month 8640
     fullHouse = 0,
     fourOfKind = 0,
     fiveOfKind = 0,
-    maxBankerWinStreak = 0,
-    maxPlayerWinStreak = 0,
-    maxTieWinStreak = 0,
     lowestBalance = startBalance,
     largestBetPlaced = baseBet,
     profit = 0,
@@ -251,10 +247,7 @@ async function runBets() {
         currentStreak = currentStreak >= 0 ? currentStreak + 1 : 1;
         //previousBet =nextBet;
         //nextBet = baseBet;
-        //bankerBet = nextBet;
-        //playerBet = 0;
-        //tieBet = 0;
-    }else{
+     }else{
         loseCount++;
         currentStreak = currentStreak <= 0 ? currentStreak - 1 : -1;
         if (currentStreak < highestLosingStreak) {
